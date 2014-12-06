@@ -1,0 +1,48 @@
+" Note: Skip initialization for vim-tiny or vim-small.
+if !1 | finish | endif
+
+if has('vim_starting')
+  set nocompatible               " Be iMproved
+
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+NeoBundle 'Shougo/unite.vim'                  " ファイルを便利に開く
+NeoBundle 'altercation/vim-colors-solarized'  " Solarized
+NeoBundle 'itchyny/lightline.vim'             " ステータスライン強化
+NeoBundle 'scrooloose/nerdtree'               " ファイルをTree表示
+NeoBundle 'scrooloose/nerdcommenter.git'      " コメント、コメントアウトをトグル
+NeoBundle 'tpope/vim-fugitive'                " gitのブランチを表示
+NeoBundle 'airblade/vim-gitgutter'            " git差分表示
+
+
+"----------------------------------------------------
+" lightline
+"----------------------------------------------------
+" vim-gitgutter
+let g:gitgutter_sign_added = '✚'
+let g:gitgutter_sign_modified = '➜'
+let g:gitgutter_sign_removed = '✘'
+
+" lightline.vim
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
+
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+

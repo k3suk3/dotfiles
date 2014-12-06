@@ -1,0 +1,36 @@
+"-------------------------------------------------------------------------------
+" 基本設定 Basics
+"-------------------------------------------------------------------------------
+set nobackup                     " バックアップ取らない
+set noswapfile                   " スワップファイル作らない
+set autoread                     " 他で書き換えられたら自動で読み直す
+set vb t_vb=                     " ビープをならさない
+set number                       " 行番号を表示
+set laststatus=2
+
+syntax enable
+set background=dark
+colorscheme solarized
+
+" OSのクリップボードを使用する
+set clipboard+=unnamed
+
+
+"-------------------------------------------------------------------------------
+"" 編集関連 Edit
+"-------------------------------------------------------------------------------
+
+" Tabキーを空白に変換
+set expandtab
+
+
+" insertモードを抜けるとIMEオフ 
+if executable('osascript')
+  let s:keycode_jis_eisuu = 102
+  let g:force_alphanumeric_input_command = "osascript -e 'tell application \"System Events\" to key code " . s:keycode_jis_eisuu . "' &"
+
+  inoremap <silent> <Esc> <Esc>:call system(g:force_alphanumeric_input_command)<CR>
+
+  autocmd! FocusGained *
+    \ call system(g:force_alphanumeric_input_command)
+endif
