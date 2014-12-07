@@ -22,7 +22,7 @@ NeoBundle 'scrooloose/nerdtree'               " ファイルをTree表示
 NeoBundle 'scrooloose/nerdcommenter.git'      " コメント、コメントアウトをトグル
 NeoBundle 'tpope/vim-fugitive'                " gitのブランチを表示
 NeoBundle 'airblade/vim-gitgutter'            " git差分表示
-
+NeoBundle 'mattn/emmet-vim'                   " html, cssコーディング補助
 
 "----------------------------------------------------
 " lightline
