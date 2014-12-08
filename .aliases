@@ -6,7 +6,7 @@ alias .....="cd ../../../.."
 alias -- -="cd -"
 
 # ls
-alias ls="ls -F --color=auto"
+alias ls='ls -F --color=auto --show-control-chars'
 alias ll="ls -l"
 alias la="ls -la"
 # List only directories
@@ -17,7 +17,6 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias g="git"
 alias h="history"
-alias j="jobs"
 
 # vim
 alias v="vim"

@@ -4,8 +4,6 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home
 export PATH=$JAVA_HOME/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 
-eval "$(rbenv init -)"
-
 # coreutilsを優先
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 eval $(dircolors ~/dotfiles/dircolors.ansi-dark)
@@ -18,6 +16,8 @@ for file in ~/dotfiles/.{path,bash_prompt,exports,aliases,functions,extra}; do
 done;
 unset file;
 
+eval "$(rbenv init -)"
+
 # ワイルドカードの展開を行うときに、 大文字と小文字を区別しない。
 shopt -s nocaseglob
 
@@ -29,4 +29,4 @@ shopt -s cdspell;
 
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/Users/keisuke/.gvm/bin/gvm-init.sh" ]] && source "/Users/keisuke/.gvm/bin/gvm-init.sh"
+[[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
