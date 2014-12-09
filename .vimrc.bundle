@@ -45,6 +45,8 @@ NeoBundle 'HybridText'
 NeoBundle 'dagwieers/asciidoc-vim'
 " html, cssコーディング補助
 NeoBundle 'mattn/emmet-vim'
+" 爆速カーソル移動
+NeoBundle 'Lokaltog/vim-easymotion'
 
 call neobundle#end()
 
@@ -55,6 +57,18 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
+"======================================================================
+" Emmet
+"======================================================================
+let g:user_emmet_settings = {
+    \ 'lang': 'ja'
+    \ }
+
+"======================================================================
+" EasyMotion
+"======================================================================
+let g:EasyMotion_do_mapping = 0 "Disable default mappings
+nmap s <Plug>(easymotion-s2)
 
 "======================================================================
 " lightline.vim
@@ -62,8 +76,8 @@ NeoBundleCheck
 set t_Co=256
 
 let g:lightline = {
-      \ 'colorscheme': 'wombat'
-      \ }
+    \ 'colorscheme': 'wombat'
+    \ }
 
 "======================================================================
 " unite.vim
