@@ -5,6 +5,7 @@ syntax enable
 set background=dark
 colorscheme solarized
 set formatoptions=q    "自動改行しない
+set vb t_vb=           " ビープをならさない、画面をフラッシュさせない
 
 "======================================================================
 " メニュー文字化け対応

@@ -10,7 +10,7 @@ set directory=~/.vim/tmp " スワップファイル(.swp)の作成ディレク�
 set backupdir=~/.vim/tmp " バックアップファイル(~)の作成ディレクトリ. 一世代前のファイル.
 "set nobackup            " バックアップファイルを作成しない
 set autoread             " 他で書き換えられたら自動で読み直す
-set vb t_vb=             " ビープをならさない
+set vb t_vb=             " ビープをならさない、画面をフラッシュさせない
 set number               " 行番号を表示
 set laststatus=2         " ステータス行を常に表示
 
