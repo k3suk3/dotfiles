@@ -4,6 +4,12 @@
 syntax enable
 set background=dark
 colorscheme solarized
+
+" Sign Column made by solarized color is strange, clear it.
+highlight clear SignColumn
+" vim-gitgutter will use Sign Column to set its color, reload it.
+call gitgutter#highlight#define_highlights()
+
 set formatoptions=q    "自動改行しない
 set vb t_vb=           " ビープをならさない、画面をフラッシュさせない
 
