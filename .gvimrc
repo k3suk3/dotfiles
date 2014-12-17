@@ -33,7 +33,7 @@ set cmdheight=2        " コマンドラインの高さ(GUI使用時)
 "======================================================================
 if has('win32')
   " Windows用
-  set guifont=Migu_1M:h10:cSHIFTJIS
+  set guifont=Ricty:h10:cSHIFTJIS
   " 行間隔の設定
   set linespace=1
   " 一部のUCS文字の幅を自動計測して決める
@@ -41,7 +41,7 @@ if has('win32')
     set ambiwidth=auto
   endif
 elseif has('mac')
-  set guifont=Osaka－等幅:h14
+  set guifont=Ricty:h14
 elseif has('xfontset')
   " UNIX用 (xfontsetを使用)
   set guifontset=a14,r14,k14
