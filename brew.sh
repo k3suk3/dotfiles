@@ -31,6 +31,7 @@ brew install nodebrew
 brew install rbenv
 brew install ruby-build
 
+brew install go
 brew install ack
 brew install ant
 brew install git
