@@ -18,6 +18,10 @@ install ghq
 tap peco/peco
 install peco
 
+## rcmdnk/file
+tap rcmdnk/file
+install brew-file
+
 # Other Homebrew packages
 install ack
 install ant
@@ -48,7 +52,7 @@ appstore GarageBand
 appstore iMovie
 appstore iPhoto
 appstore Keynote
-appstore LINE
+appstore Microsoft Remote Desktop
 appstore Numbers
 appstore Pages
 appstore Xcode
