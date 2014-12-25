@@ -5,7 +5,6 @@
 tap caskroom/cask
 install brew-cask
 cask install atom
-cask install firefox
 cask install google-chrome
 cask install google-japanese-ime
 cask install iterm2
@@ -18,10 +17,6 @@ install ghq
 ## peco/peco
 tap peco/peco
 install peco
-
-## rcmdnk/file
-tap rcmdnk/file
-install brew-file
 
 # Other Homebrew packages
 install ack
