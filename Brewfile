@@ -35,6 +35,7 @@ install libevent
 install libidn
 install lua
 install maven
+install nkf
 install nodebrew
 install openssl
 install pkg-config
