@@ -46,13 +46,3 @@ install tree
 install vim --override-system-vi --with-lua
 install wget --with-iri
 install xz
-
-# App Store applications
-appstore GarageBand
-appstore iMovie
-appstore iPhoto
-appstore Keynote
-appstore Microsoft Remote Desktop
-appstore Numbers
-appstore Pages
-appstore Xcode
