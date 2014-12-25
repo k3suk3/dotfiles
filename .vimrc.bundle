@@ -1,6 +1,6 @@
 "======================================================================
 " NeoBundle 設定
-" 
+"
 " :NeoBundleList - list configured bundles
 " :NeoBundleInstall(!) - install (update) bundles
 " :NeoBundleClean(!) - confirm (or auto-approve) removal of unused bundles
@@ -25,7 +25,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neomru.vim'
 " ファイルを便利に開く
-NeoBundle 'Shougo/unite.vim'                  
+NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'Shougo/vimproc.vim'
 NeoBundle 'Shougo/vimshell.vim'
