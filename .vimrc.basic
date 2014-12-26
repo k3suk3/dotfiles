@@ -13,6 +13,14 @@ set autoread             " 他で書き換えられたら自動で読み直す
 set vb t_vb=             " ビープをならさない、画面をフラッシュさせない
 set number               " 行番号を表示
 set laststatus=2         " ステータス行を常に表示
+set clipboard+=unnamed   " OSのクリップボードを使用する
+set display=lastline     " 画面の最後の行をできる限り表示する
+set pumheight=10         " 補完メニューの高さ
+set showmatch            " 閉じ括弧入力時に対応する括弧にジャンプ
+set matchtime=1          " 対応する括弧へのジャンプ時間(0.1秒 * 1)
+
+" 行末までコピー
+nnoremap Y y$
 
 syntax enable
 
@@ -24,9 +32,6 @@ colorscheme solarized
 highlight clear SignColumn
 " vim-gitgutter will use Sign Column to set its color, reload it.
 call gitgutter#highlight#define_highlights()
-
-" OSのクリップボードを使用する
-set clipboard+=unnamed
 
 " コマンド履歴
 set history=10000
