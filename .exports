@@ -4,10 +4,13 @@ export EDITOR="vim";
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768;
 export HISTFILESIZE=$HISTSIZE;
-export HISTCONTROL=ignoredups;
-# Make some commands not show up in history
+
+# 同じコマンドが連続する場合は1回だけ記録する (ignoredups)
+# コマンドの先頭にスペースをつけて実行すると記録しない (ignorespace)
+export HISTCONTROL=ignoreboth;
+
+# 記録しないコマンド
 export HISTIGNORE="ls:ll:la:cd:cd -:pwd:exit:date:* --help";
 
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
-
