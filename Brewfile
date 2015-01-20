@@ -5,6 +5,7 @@
 tap caskroom/cask
 install brew-cask
 cask install atom
+cask install firefox
 cask install google-chrome
 cask install google-japanese-ime
 cask install iterm2
@@ -48,3 +49,13 @@ install tree
 install vim --override-system-vi --with-lua
 install wget --with-iri
 install xz
+
+# App Store applications
+appstore GarageBand
+appstore iMovie
+appstore iPhoto
+appstore Keynote
+appstore LINE
+appstore Numbers
+appstore Pages
+appstore Xcode
