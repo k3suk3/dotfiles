@@ -17,6 +17,9 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias g="git"
 alias h="history"
+
+# Vim
+alias vim="/Applications/MacVim.app/Contents/MacOS/mvim"
 alias v="vim"
 
 # update software
