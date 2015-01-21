@@ -5,7 +5,6 @@
 tap caskroom/cask
 install brew-cask
 cask install atom
-cask install firefox
 cask install google-chrome
 cask install google-japanese-ime
 cask install iterm2
