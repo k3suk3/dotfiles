@@ -29,6 +29,7 @@ install ant
 install autoconf
 install bash
 install bash-completion
+install bdw-gc
 install coreutils
 install git
 install go
@@ -47,15 +48,18 @@ install ruby-build
 install tmux
 install tree
 install vim --override-system-vi --with-lua
+install w3m
 install wget --with-iri
 install xz
 
 # App Store applications
+appstore Caffeine
 appstore GarageBand
 appstore iMovie
 appstore iPhoto
 appstore Keynote
 appstore LINE
+appstore Microsoft Remote Desktop
 appstore Numbers
 appstore Pages
 appstore Xcode
