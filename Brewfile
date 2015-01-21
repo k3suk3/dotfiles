@@ -42,6 +42,7 @@ install nodebrew
 install openssl
 install pkg-config
 install pyenv
+install pyenv-virtualenv
 install rbenv
 install readline
 install ruby-build
