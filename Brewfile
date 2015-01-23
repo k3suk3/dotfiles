@@ -5,7 +5,6 @@
 tap caskroom/cask
 install brew-cask
 cask install atom
-cask install firefox
 cask install google-chrome
 cask install google-japanese-ime
 cask install iterm2
@@ -42,6 +41,7 @@ install nodebrew
 install openssl
 install pkg-config
 install pyenv
+install pyenv-virtualenv
 install rbenv
 install readline
 install ruby-build
