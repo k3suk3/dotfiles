@@ -45,8 +45,8 @@ install pyenv-virtualenv
 install rbenv
 install readline
 install ruby-build
-install tmux
 install scala
+install tmux
 install tree
 install vim --override-system-vi --with-lua
 install w3m
