@@ -26,6 +26,7 @@ install brew-file
 install ack
 install ant
 install autoconf
+install autojump
 install bash
 install bash-completion
 install bdw-gc
