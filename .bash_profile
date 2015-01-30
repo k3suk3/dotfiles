@@ -28,6 +28,8 @@ shopt -s histappend;
 # `cd` を使う時にタイポを自動修正
 shopt -s cdspell;
 
+# autojumpの設定
+[[ -s $(brew --prefix)/etc/autojump.sh ]] && . $(brew --prefix)/etc/autojump.sh
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
