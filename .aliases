@@ -29,7 +29,7 @@ alias v="vim"
 # update software
 alias update="sudo softwareupdate --install --all;
               brew update;
-              brew upgrade;
+              brew upgrade --all;
               brew cleanup;"
 
 # IP addresses
