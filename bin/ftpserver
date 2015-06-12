@@ -1,6 +1,15 @@
 #!/usr/bin/env groovy
+import org.apache.ftpserver.ConnectionConfigFactory
+
 /**
  * Simple FTP Server
+ *
+ * Usage:
+ *   anonymous user and share current directory
+ *   $ ftpserver
+ *
+ *   full option example
+ *   $ ftpserver --port 21 -u ftpuser -p Passw0rd! -d /path/to/dir
  */
 
 @Grab('org.apache.ftpserver:ftpserver-core:1.0.6')
@@ -15,11 +24,11 @@ import org.apache.ftpserver.usermanager.impl.BaseUser
 
 def cli = new CliBuilder(usage:'ftpserver [options]', header:'Options:')
 cli.with {
-    _ longOpt:'port', argName: 'port', args: 1, 'specify port number'
+    _ longOpt: 'port', argName: 'port', args: 1, 'specify port number'
     u argName: 'username', args: 1, 'specify username. default is "user"'
     p argName: 'password', args: 1, 'specify password. default is "password"'
     d argName: 'home directory', args: 1, 'specify home directory. default is current directory'
-    h longOpt:'help', 'show help'
+    h longOpt: 'help', 'show help'
 }
 
 def options = cli.parse(args)
@@ -31,12 +40,15 @@ if (options.h) {
 }
 
 // options setting
-def port = options.port ? options.port.toInteger(): 21
-def username = options.u ?: 'user'
-def password = options.p ?: 'password'
+def port = options.port ? options.port.toInteger(): 2121
+def username = options.u ?: 'anonymous'
+def password = options.p ?: ''
 def directory = options.d ?: '.'
 
 def serverFactory = new FtpServerFactory()
+def configFactory = new ConnectionConfigFactory()
+configFactory.setAnonymousLoginEnabled(true)
+serverFactory.setConnectionConfig(configFactory.createConnectionConfig())
 
 // add user
 def userManagerFactory = new PropertiesUserManagerFactory()
