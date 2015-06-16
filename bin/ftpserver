@@ -1,6 +1,4 @@
 #!/usr/bin/env groovy
-import org.apache.ftpserver.ConnectionConfigFactory
-
 /**
  * Simple FTP Server
  *
@@ -16,11 +14,13 @@ import org.apache.ftpserver.ConnectionConfigFactory
 @Grab('org.slf4j:slf4j-api:1.7.12')
 @Grab('org.slf4j:slf4j-simple:1.7.12')
 
+import org.apache.ftpserver.ConnectionConfigFactory
 import org.apache.ftpserver.FtpServerFactory
 import org.apache.ftpserver.listener.ListenerFactory
 import org.apache.ftpserver.usermanager.PropertiesUserManagerFactory
 import org.apache.ftpserver.usermanager.SaltedPasswordEncryptor
 import org.apache.ftpserver.usermanager.impl.BaseUser
+import org.apache.ftpserver.usermanager.impl.WritePermission
 
 def cli = new CliBuilder(usage:'ftpserver [options]', header:'Options:')
 cli.with {
@@ -55,10 +55,12 @@ def userManagerFactory = new PropertiesUserManagerFactory()
 userManagerFactory.setPasswordEncryptor(new SaltedPasswordEncryptor())
 def userManager = userManagerFactory.createUserManager()
 BaseUser user = new BaseUser()
+
 user.with {
     setName username
     setPassword password
     setHomeDirectory directory
+    setAuthorities([new WritePermission()])
 }
 userManager.save(user)
 serverFactory.setUserManager(userManager)
