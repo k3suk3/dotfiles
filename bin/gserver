@@ -20,5 +20,5 @@ def server = new Server(port)
 server.handler = handler
 server.start()
 
-java.awt.Desktop.desktop.browse("http://localhost:${port}/index.html".toURI())
+java.awt.Desktop.desktop.browse("http://localhost:${port}/".toURI())
 println "Starting Jetty, press Ctrl+C to stop."
