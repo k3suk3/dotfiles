@@ -2,20 +2,38 @@
 /**
  * Minimal Static WebServer
  *
- * Usage: server [port]
- * Default port is 8080.
+ * Usage:
+ *   $ gserver
+ *   $ gserver -p 3000 -d /path/to/directory
  */
+
+@Grab(group='org.eclipse.jetty.aggregate', module='jetty-all', version='7.6.15.v20140411')
 
 import org.eclipse.jetty.server.Server
 import org.eclipse.jetty.server.handler.ResourceHandler
 
-@Grab(group='org.eclipse.jetty.aggregate', module='jetty-all', version='7.6.15.v20140411')
+def cli = new CliBuilder(usage:'gserver [options]', header:'Options:')
+cli.with {
+    p argName: 'port', args: 1, 'specify port number'
+    d argName: 'directory', args: 1, 'specify www directory'
+    h longOpt: 'help', 'show help'
+}
+
+def options = cli.parse(args)
+if (!options) return
+
+if (options.h) {
+    cli.usage()
+    return
+}
+
+def port = options.p ? options.p.toInteger(): 8080
+def directory = options.d ?: '.'
 
 def handler = new ResourceHandler();
-handler.resourceBase = '.'
+handler.resourceBase = directory
 handler.directoriesListed = true
 
-def port = args.size() ? args[0].toInteger() : 8080;
 def server = new Server(port)
 server.handler = handler
 server.start()
