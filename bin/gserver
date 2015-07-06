@@ -20,17 +20,13 @@ cli.with {
 }
 
 def options = cli.parse(args)
-if (!options) return
-
-if (options.h) {
-    cli.usage()
-    return
-}
+if (!options) System.exit(128)
+if (options.h) return cli.usage()
 
 def port = options.p ? options.p.toInteger(): 8080
 def directory = options.d ?: '.'
 
-def handler = new ResourceHandler();
+def handler = new ResourceHandler()
 handler.resourceBase = directory
 handler.directoriesListed = true
 
