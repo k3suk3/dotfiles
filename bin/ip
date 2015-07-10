@@ -1,0 +1,10 @@
+#!/usr/bin/env groovy
+/**
+ * Show Global IP Address
+ *
+ * Usage:
+ *   $ ip
+ */
+
+print "http://ipinfo.io/ip".toURL().text
+
