@@ -7,7 +7,7 @@
  *   $ gserver -p 3000 -d /path/to/directory
  */
 
-@Grab(group='org.eclipse.jetty.aggregate', module='jetty-all', version='7.6.15.v20140411')
+@Grab(group='org.eclipse.jetty.aggregate', module='jetty-all', version='7.6.17.v20150415')
 
 import org.eclipse.jetty.server.Server
 import org.eclipse.jetty.server.handler.ResourceHandler
