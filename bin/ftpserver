@@ -50,20 +50,18 @@ serverFactory.setConnectionConfig(configFactory.createConnectionConfig())
 def userManagerFactory = new PropertiesUserManagerFactory()
 userManagerFactory.setPasswordEncryptor(new SaltedPasswordEncryptor())
 def userManager = userManagerFactory.createUserManager()
-BaseUser user = new BaseUser()
-
-user.with {
+BaseUser user = new BaseUser().with {
     setName username
     setPassword password
     setHomeDirectory directory
     setAuthorities([new WritePermission()])
+    return it
 }
 userManager.save(user)
 serverFactory.setUserManager(userManager)
 
 // create listener
-ListenerFactory listenerFactory = new ListenerFactory()
-listenerFactory.port = port
+ListenerFactory listenerFactory = new ListenerFactory(port: port)
 serverFactory.addListener("default", listenerFactory.createListener())
 
 // ftp server start
