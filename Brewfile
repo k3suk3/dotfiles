@@ -38,6 +38,7 @@ install docker-compose
 install docker-swarm
 install git
 install go
+install jq
 install libevent
 install libidn
 install lua
