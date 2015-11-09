@@ -1,22 +1,9 @@
 
 # tap repositories and their packages
 
-## caskroom/cask
-tap caskroom/cask
-install brew-cask
-cask install atom
-cask install google-chrome
-cask install google-japanese-ime
-cask install iterm2
-cask install skitch
-
 ## motemen/ghq
 tap motemen/ghq
 install ghq
-
-## peco/peco
-tap peco/peco
-install peco
 
 ## rcmdnk/file
 tap rcmdnk/file
@@ -46,6 +33,7 @@ install maven
 install nkf
 install nodebrew
 install openssl
+install peco
 install pkg-config
 install pyenv
 install pyenv-virtualenv
@@ -59,13 +47,3 @@ install vim --override-system-vi --with-lua
 install w3m
 install wget --with-iri
 install xz
-
-# App Store applications
-appstore GarageBand
-appstore iMovie
-appstore iPhoto
-appstore Keynote
-appstore LINE
-appstore Numbers
-appstore Pages
-appstore Xcode
