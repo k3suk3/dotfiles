@@ -40,6 +40,6 @@ shopt -s cdspell;
 # bash-completion
 [[ -s $(brew --prefix)/etc/bash_completion ]] && . $(brew --prefix)/etc/bash_completion
 
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
-
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/keisuke/.sdkman"
+[[ -s "/Users/keisuke/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/keisuke/.sdkman/bin/sdkman-init.sh"
