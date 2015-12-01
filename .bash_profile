@@ -39,6 +39,7 @@ shopt -s cdspell;
 
 # bash-completion
 [[ -s $(brew --prefix)/etc/bash_completion ]] && . $(brew --prefix)/etc/bash_completion
+complete -C aws_completer aws
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/keisuke/.sdkman"
