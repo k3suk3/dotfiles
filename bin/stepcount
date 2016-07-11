@@ -1,0 +1,38 @@
+#!/usr/bin/env groovy
+@GrabResolver(name="amateras", root="http://amateras.sourceforge.jp/mvn")
+@GrabResolver(name="seasar", root="http://maven.seasar.org/maven2")
+@Grab("commons-logging:commons-logging:1.1.1")
+@Grab("jp.sf.amateras.stepcounter:stepcounter:3.0.3")
+@GrabConfig(systemClassLoader = true)
+
+def cli = new CliBuilder(usage:'stepcounter [options]', header:'Options:')
+cli.with {
+    f argName: 'format', args: 1, 'specify output format.(csv, excel, xml, json, text)'
+    o argName: 'output', args: 1, 'specify putput file'
+    e argName: 'encoding', args: 1, 'specify input file encoding'
+    s argName: 'showDirectory', args: 1, 'show directory'
+    t argName: 'type', args: 1, 'specify target file extention'
+    h longOpt: 'help', 'show help'
+}
+
+def opt = cli.parse(args)
+if (opt.h) return cli.usage()
+
+def options = [:]
+if (opt.f) options.format = opt.f
+if (opt.o) options.output = opt.o
+if (opt.e) options.encoding = opt.e
+if (opt.s) options.showDirectory = true
+
+def ant = new AntBuilder()
+ant.taskdef(name: 'stepcounter', classname: 'jp.sf.amateras.stepcounter.ant.StepCounterTask')
+
+ant.stepcounter(options) {
+    fileset(dir: '.') {
+        if (opt.t) {
+            opt.t.split(',').each {
+                include(name: "**/*.${it}")
+            }
+        }
+    }
+}
