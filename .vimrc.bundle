@@ -42,7 +42,6 @@ NeoBundle 'scrooloose/nerdcommenter.git'
 " Solarized
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'HybridText'
-NeoBundle 'dagwieers/asciidoc-vim'
 " html, cssコーディング補助
 NeoBundle 'mattn/emmet-vim'
 " 爆速カーソル移動
