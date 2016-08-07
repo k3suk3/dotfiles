@@ -8,6 +8,7 @@ alias -- -="cd -"
 # ls
 alias ls='ls -F --color=auto --show-control-chars'
 alias ll="ls -l"
+alias llh="ls -la"
 alias la="ls -la"
 # List only directories
 alias lld="ll | grep '^d'"
