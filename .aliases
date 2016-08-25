@@ -53,3 +53,6 @@ alias badge="tput bel"
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
+
+alias ap="ansible-playbook"
+
