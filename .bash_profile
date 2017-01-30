@@ -2,8 +2,7 @@ export PATH="$HOME/bin:$PATH";
 export PATH=$PATH:./node_modules/.bin
 
 export GOPATH=$HOME/go
-# export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
 export PATH=$JAVA_HOME/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 
@@ -28,6 +27,7 @@ unset file;
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which direnv > /dev/null; then eval "$(direnv hook bash)"; fi
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 # ワイルドカードの展開を行うときに、 大文字と小文字を区別しない。
 shopt -s nocaseglob
