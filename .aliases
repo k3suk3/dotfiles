@@ -24,7 +24,7 @@ alias sts="open -n ~/Applications/STS.app"
 alias ggts="open -n ~/Applications/GGTS.app"
 
 # Vim
-alias vim="/Applications/MacVim.app/Contents/MacOS/mvim"
+alias vim="/Applications/MacVim.app/Contents/bin/mvim"
 alias v="vim"
 
 # update software
@@ -55,4 +55,3 @@ alias badge="tput bel"
 alias reload="exec $SHELL -l"
 
 alias ap="ansible-playbook"
-
