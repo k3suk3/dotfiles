@@ -19,10 +19,6 @@ alias dt="cd ~/Desktop"
 alias g="git"
 alias h="history"
 
-#Eclipse
-alias sts="open -n ~/Applications/STS.app"
-alias ggts="open -n ~/Applications/GGTS.app"
-
 # Vim
 alias vim="/Applications/MacVim.app/Contents/bin/mvim"
 alias v="vim"
