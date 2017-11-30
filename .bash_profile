@@ -19,9 +19,7 @@ done;
 unset file;
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which direnv > /dev/null; then eval "$(direnv hook bash)"; fi
-if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 # ワイルドカードの展開を行うときに、 大文字と小文字を区別しない。
 shopt -s nocaseglob
