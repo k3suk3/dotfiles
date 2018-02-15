@@ -58,3 +58,4 @@ set softtabstop=4 " 連続した空白に対してタブキーやバックスペ
 
 " Gradle
 au BufNewFile,BufRead *.gradle			setf groovy
+au BufNewFile,BufRead *.dig	    		setf yaml
