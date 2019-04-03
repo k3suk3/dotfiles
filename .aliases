@@ -26,7 +26,7 @@ alias v="vim"
 # update software
 alias update="sudo softwareupdate --install --all;
               brew update;
-              brew upgrade --all;
+              brew upgrade;
               brew cleanup;"
 
 # IP addresses
