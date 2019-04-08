@@ -7,7 +7,7 @@ fi
 
 export PATH=$PATH:./node_modules/.bin
 export GOPATH=$HOME/go
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-10.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home
 export PATH=$JAVA_HOME/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 
