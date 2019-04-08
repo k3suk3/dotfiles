@@ -6,5 +6,5 @@
  *   $ ip
  */
 
-print "http://ipinfo.io/ip".toURL().text
+print "https://checkip.amazonaws.com/".toURL().text
 
