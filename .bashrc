@@ -10,6 +10,7 @@ export GOPATH=$HOME/go
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home
 export PATH=$JAVA_HOME/bin:$PATH
 export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
 
 #coreutilsを優先
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
