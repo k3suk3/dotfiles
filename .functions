@@ -109,5 +109,6 @@ function a() {
 # `less` with options to preserve color and line numbers, unless the output is
 # small enough for one screen.
 function tre() {
-	tree -aC -I '.metadata|.git|node_modules|bower_components|.vagrant' --dirsfirst "$@" | less -FRNX;
+	tree -aC -I 'venv|.idea|.terraform|.metadata|.git|node_modules|.vagrant' --dirsfirst "$@" | less -FRNX;
 }
+
