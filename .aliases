@@ -16,8 +16,6 @@ alias lld="ll | grep '^d'"
 # Shourtcuts
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias g="git"
-alias h="history"
 
 # Vim
 alias vim="/Applications/MacVim.app/Contents/bin/mvim"
@@ -41,19 +39,10 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 
-# Hide/show all desktop icons (useful when presenting)
-alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
-alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
-
-# Ring the terminal bell, and put a badge on Terminal.app’s Dock icon
-# (useful when executing time-consuming commands)
-alias badge="tput bel"
-
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
 
 # jdk
-alias j11="export JAVA_HOME=$(/usr/libexec/java_home -v 11); java -version"
-alias j8="export JAVA_HOME=$(/usr/libexec/java_home -v 1.8); java -version"
+alias j11="export JAVA_HOME=$(/usr/libexec/java_home -v 11)"
+alias j8="export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)"
 
-alias ap="ansible-playbook"
