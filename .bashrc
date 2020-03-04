@@ -7,10 +7,12 @@ fi
 
 export PATH=$PATH:./node_modules/.bin
 export GOPATH=$HOME/go
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home
+export PATH=$PATH:$GOPATH/bin
+export JAVA_HOME=$(/usr/libexec/java_home -v 11)
 export PATH=$JAVA_HOME/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
+export DIRENV_WARN_TIMEOUT=100s
 
 #coreutilsを優先
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
