@@ -35,17 +35,6 @@ shopt -s nocaseglob
 # Append to the Bash history file, rather than overwriting it
 shopt -s histappend;
 
-# `cd` を使う時にタイポを自動修正
-shopt -s cdspell;
-
-# autojumpの設定
-[[ -s $(brew --prefix)/etc/autojump.sh ]] && . $(brew --prefix)/etc/autojump.sh
-
 # bash-completion
 [[ -s $(brew --prefix)/etc/bash_completion ]] && . $(brew --prefix)/etc/bash_completion
 complete -C aws_completer aws
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-# [[ -s "$HOME/.iterm2_shell_integration.bash" ]] && source "$HOME/.iterm2_shell_integration.bash"
-
